@@ -11,7 +11,7 @@
  * Igor de Albuquerque Sobreira - igorsbreira@gmail.com
  * Vinícius Bezerra Pessoa - viniciusbpessoa02@gamil.com
  * Rony Elias de Oliveira - r.eliasemp@gmail.com
- * 5 Aluno - James
+ * James Anderson do Nascimento - nascjimmy@gmail.com
 
 ## Descrição geral do projeto 
 
@@ -24,7 +24,8 @@ Comparador diferencial leucocitário de analistas para estudantes.
 
 2º) 
 
-    1. Profissional - Contagens (Melhora de qualidade de vida ao profissional durante a contagem realizando-a de forma interativa), Gerador de relatórios (Registro histórico), organização a partir de perfis, Media entre diferentes contagens em um perfil, visualização dessas informações.
+    1. Profissional - Contagens (Melhora de qualidade de vida ao profissional durante a contagem realizando-a de forma interativa), 
+    Gerador de relatórios (Registro histórico), organização a partir de perfis, Media entre diferentes contagens em um perfil, visualização dessas informações.
 
 3º)
 
