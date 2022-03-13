@@ -1,11 +1,8 @@
 # Comparador-diferencial-leucocit-rio-de-analistas-para-estudantes.
 
 ## Projeto ABC 
-[Nome do projeto ou do grupo - este será seu identificador único até o final da disciplina]
-
 
 ## Integrantes do grupo 
-[Liste o nome completo de todos os integrantes do grupo com seus respectivos e-mails]
 
  * Antonio Marcos Saraiva  - saraivas2@yahoo.com.br
  * Igor de Albuquerque Sobreira - igorsbreira@gmail.com
@@ -15,38 +12,43 @@
 
 ## Descrição geral do projeto 
 
-Comparador diferencial leucocitário de analistas para estudantes.
+O sistema é uma espécie de banco de dados de contagens diferenciais leucocitárias fornecidas por
+profissionais para estudantes. Sejam professores e seus alunos ou quaisquer outros públicos relevantes.
+Os fornecedores apresentam amostras laboratoriais e os demais (ou os próprios fornecedores) podem avaliar,
+comentar, estudar, realizar operações a partir da amostra, etc. Facilitando o acesso à informação a todos.
 
 1º)
 
-    1. Profissionais laboratoriais: Medicos, farmacêuticos e biomedical e etc. (Fornecedores de informações).
-    2. Estudantes: medicina, biologia, biomedicina, Pharmacia e etc. (Usuários comuns).
+    1. Profissionais laboratoriais: Médicos, farmacêuticos, biomédicos, etc. (Fornecedores de informações).
+    2. Estudantes (de medicina, biologia, biomedicina, farmácia, etc.), pesquisadores e outros. (Usuários comuns).
 
 2º) 
 
-    1. Profissional - Contagens (Melhora de qualidade de vida ao profissional durante a contagem realizando-a de forma interativa), 
-    Gerador de relatórios (Registro histórico), organização a partir de perfis, Media entre diferentes contagens em um perfil, visualização dessas informações.
+    Os principais serviços deste sistema são o registro de amostras laboratoriais e as operações feitas em cima
+    destes dados (médias, comparações, contagens, agrupamentos...), visando a praticidade e qualidade de vida
+    num quesito que ainda é muito manual e antiquado.
 
 3º)
 
-    1. Todos -  Visualisação de dados, manipulaçoes de dados para a visualisação e conatgem.
-    2. Proficionais - Auterar dados, acrescer dados e deletar dados.
+    1. Todos (Profisionais e Comuns) -  Visualisação de dados das amostras, concepção de análises, contagens,
+    cálculos e mais a partir de dados retirados das amostras, submissão de comentários e exportação de dados.
+    2. Somente Profissionais - Submissão, edição e exclusão de amostras e gerenciamento de perfis Comuns.
 
 ## Requisitos do projeto
 
-    Proficionais:
+    Profissionais:
 
-        1. Login e ou cadastro de perfil profissional.
-        2. Submição, adição, remoção ou edição de amostras.
-        3. Gerenciamento de amostras.
-        4. Gerenciamento de contas dos usuarios gerais (Visualisação, modificação e remoção), Formas de agrupar contas de Usuarios com para facilitar suas visualisações.
-        5. Todos os itens listados em “Usuario geral”.
+        1. Login e/ou cadastro de um perfil Profissional;
+        2. Submissão, edição, remoção e gerenciamento de amostras (As submissões ficam atreladas ao perfil);
+        4. Administração de contas comuns (Agrupamento, silenciamento e exclusão);
+        5. Todos os itens - exceto login e cadastro - listados em “Usuário geral”.
 
-    Usuario geral:
+    Usuário geral:
 
-        1. Login e ou cadastro de perfil Comun.
-        2. Visualisção do banco de amostras.
-        3. Contagem de celulas nucleadas amostras.
-        4. Manipulação de dos dados das contagens (Media, comparação, etc) - Manipulação fica anexada ao perfil do usuario mantendo a amostra original inalterada.
-        5. Exportação dos dados e resultados de amnipulaões de amostras.
-        6. Comentar submiçoes entre o usuario e o proficional.
+        1. Login e/ou cadastro de um perfil Comum;
+        2. Visualização do banco de amostras;
+        3. Contagem de células nucleadas a partir das amostras;
+        4. Manipulação dos dados das contagens e amostras (Média, comparação, interpretação...) (As submissões
+        ficam atreladas ao perfil);
+        5. Exportação dos dados e resultados de amostras ou operações.
+        6. Comentar submissões (independente de que tipo seja).
