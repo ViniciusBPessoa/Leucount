@@ -19,8 +19,8 @@ Comparador diferencial leucocitário de analistas para estudantes.
 
 1º)
 
-    1. Profissionais laboratoriais: Medicos, farmacêuticos e biomedical e etc. (Fornecedores de informações).
-    2. Estudantes: medicina, biologia, biomedicina, Pharmacia e etc. (Usuários comuns).
+    1. Profissionais laboratoriais: Médicos, farmacêuticos e biomédicos e etc. (Fornecedores de informações).
+    2. Estudantes: medicina, biologia, biomedicina, farmácia e etc. (Usuários comuns).
 
 2º) 
 
@@ -29,24 +29,24 @@ Comparador diferencial leucocitário de analistas para estudantes.
 
 3º)
 
-    1. Todos -  Visualisação de dados, manipulaçoes de dados para a visualisação e conatgem.
-    2. Proficionais - Auterar dados, acrescer dados e deletar dados.
+    1. Todos -  Visualisação de dados, manipulações de dados para a visualisação e conatgem.
+    2. Profissionais - Alterar dados, acrescer dados e deletar dados.
 
 ## Requisitos do projeto
 
     Proficionais:
 
         1. Login e ou cadastro de perfil profissional.
-        2. Submição, adição, remoção ou edição de amostras.
+        2. Submissão, adição, remoção ou edição de amostras.
         3. Gerenciamento de amostras.
-        4. Gerenciamento de contas dos usuarios gerais (Visualisação, modificação e remoção), Formas de agrupar contas de Usuarios com para facilitar suas visualisações.
-        5. Todos os itens listados em “Usuario geral”.
+        4. Gerenciamento de contas dos usuarios gerais (Visualisação, modificação e remoção), Formas de agrupar contas de Usuários com para facilitar suas visualizações.
+        5. Todos os itens listados em “Usuário geral”.
 
-    Usuario geral:
+    Usuário geral:
 
-        1. Login e ou cadastro de perfil Comun.
-        2. Visualisção do banco de amostras.
+        1. Login e ou cadastro de perfil Comum.
+        2. Visualização do banco de amostras.
         3. Contagem de celulas nucleadas amostras.
-        4. Manipulação de dos dados das contagens (Media, comparação, etc) - Manipulação fica anexada ao perfil do usuario mantendo a amostra original inalterada.
-        5. Exportação dos dados e resultados de amnipulaões de amostras.
-        6. Comentar submiçoes entre o usuario e o proficional.
+        4. Manipulação dos dados das contagens (Media, comparação, etc) - Manipulação fica anexada ao perfil do usuário mantendo a amostra original inalterada.
+        5. Exportação dos dados e resultados de manipulações de amostras.
+        6. Comentar submissões entre o usuario e o profissional.
