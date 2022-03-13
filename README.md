@@ -1,6 +1,4 @@
-# Comparador-diferencial-leucocit-rio-de-analistas-para-estudantes.
-
-## Projeto ABC 
+## Projeto: Leucount
 
 ## Integrantes do grupo 
 
@@ -17,18 +15,18 @@ profissionais para estudantes. Sejam professores e seus alunos ou quaisquer outr
 Os fornecedores apresentam amostras laboratoriais e os demais (ou os próprios fornecedores) podem avaliar,
 comentar, estudar, realizar operações a partir da amostra, etc. Facilitando o acesso à informação a todos.
 
-1º)
+1º) Quem vai usar o programa?
 
     1. Profissionais laboratoriais: Médicos, farmacêuticos, biomédicos, etc. (Fornecedores de informações).
     2. Estudantes (de medicina, biologia, biomedicina, farmácia, etc.), pesquisadores e outros. (Usuários comuns).
 
-2º) 
+2º) Que serviços são "necessários"?
 
     Os principais serviços deste sistema são o registro de amostras laboratoriais e as operações feitas em cima
     destes dados (médias, comparações, contagens, agrupamentos...), visando a praticidade e qualidade de vida
     num quesito que ainda é muito manual e antiquado.
 
-3º)
+3º) Quais serviços cada usuário pode executar?
 
     1. Todos (Profisionais e Comuns) -  Visualisação de dados das amostras, concepção de análises, contagens,
     cálculos e mais a partir de dados retirados das amostras, submissão de comentários e exportação de dados.
