@@ -29,7 +29,7 @@ Comparador diferencial leucocitário de analistas para estudantes.
 
 3º)
 
-    1. Todos -  Visualisação de dados, manipulações de dados para a visualisação e conatgem.
+    1. Todos -  Visualização de dados, manipulações de dados para a visualização e conatgem.
     2. Profissionais - Alterar dados, acrescer dados e deletar dados.
 
 ## Requisitos do projeto
