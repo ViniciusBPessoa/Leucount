@@ -6,7 +6,6 @@
  * Igor de Albuquerque Sobreira - igorsbreira@gmail.com
  * Vinícius Bezerra Pessoa - viniciusbpessoa02@gamil.com
  * Rony Elias de Oliveira - r.eliasemp@gmail.com
- * James Anderson do Nascimento - nascjimmy@gmail.com
 
 ## Descrição geral do projeto 
 
