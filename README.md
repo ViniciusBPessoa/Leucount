@@ -4,7 +4,7 @@
 
  * Antonio Marcos Saraiva  - saraivas2@yahoo.com.br
  * Igor de Albuquerque Sobreira - igorsbreira@gmail.com
- * Vinícius Bezerra Pessoa - viniciusbpessoa02@gamil.com
+ * Vinícius Bezerra Pessoa - viniciusbpessoa02@gmail.com
  * Rony Elias de Oliveira - r.eliasemp@gmail.com
 
 ## Descrição geral do projeto 
