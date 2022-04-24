@@ -1,4 +1,4 @@
-package negocio;
+package dados;
 
 import java.util.Map;
 
