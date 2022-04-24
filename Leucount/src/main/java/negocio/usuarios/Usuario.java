@@ -1,12 +1,18 @@
 package negocio.usuarios;
 
-import java.time.LocalDate;
+import dados.Grupos;
+import javafx.util.Pair;
 
-public abstract class Usuario {
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public abstract class Usuario{
 
     private String nome;
     private String codigo;
     private LocalDate dataNascimento;
+    private ArrayList<String> feed;
+    private ArrayList<Grupos> grupos;
 
 
     public Usuario(String nome, String codigo, LocalDate dataNascimento) {
@@ -14,6 +20,8 @@ public abstract class Usuario {
         this.codigo = codigo;
         this.dataNascimento = dataNascimento;
     }
+
+    public void adicionarGrupo(){}
 
 
     public String getNome() {

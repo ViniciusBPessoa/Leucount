@@ -9,6 +9,7 @@ public class RepositorioUsuarios {
     private Map <String, Usuario> usuarios;
 
     public RepositorioUsuarios(Map<String, Usuario> usuarios) {
+
         this.usuarios = usuarios;
     }
 
@@ -19,6 +20,7 @@ public class RepositorioUsuarios {
     }
 
     public void deletar(String codigo){
+
         this.usuarios.remove(codigo);
     }
 
@@ -34,4 +36,5 @@ public class RepositorioUsuarios {
     public void setUsuarios(Map<String, Usuario> usuarios) {
         this.usuarios = usuarios;
     }
+
 }
