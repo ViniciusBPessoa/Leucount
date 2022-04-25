@@ -1,12 +1,12 @@
 package dados.interfaces;
 
-import dados.RepositoAmostras;
+import dados.RepositorioAmostras;
 import negocio.usuarios.Usuario;
 
 public interface InterfaceControladorAmostras {
-    void Inserir(RepositoAmostras repositorio);
+    void inserir(RepositorioAmostras repositorio);
 
-    void Deletar(Usuario usuario);
+    void deletar(Usuario usuario);
 
     void salvar() /* Responsavel por armazenar em um arquivo */;
 }

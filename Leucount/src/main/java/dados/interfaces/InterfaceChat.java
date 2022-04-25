@@ -1,5 +1,5 @@
 package dados.interfaces;
 
 public interface InterfaceChat {
-    void incerirMSG(String usuario, String msg);
+    void inserirMSG(String usuario, String msg);
 }

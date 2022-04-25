@@ -5,19 +5,19 @@ import negocio.Amostra;
 
 import java.util.Map;
 
-public class RepositoAmostras implements InterfaceRepositorioAmostra {
+public class RepositorioAmostras implements InterfaceRepositorioAmostra {
 
     private Map<String, Amostra> amostras;
 
-    public RepositoAmostras(Map<String, Amostra> amostras) {
+    public RepositorioAmostras(Map<String, Amostra> amostras) {
         this.amostras = amostras;
     }
 
-    public RepositoAmostras() {
+    public RepositorioAmostras() {
     }
 
     @Override
-    public void incerir(Amostra amostra){  /* exeções ainda não tratadas */
+    public void inserir(Amostra amostra){  /* exeções ainda não tratadas */
         this.amostras.put(amostra.getIdAmostra(), amostra);
     }
 

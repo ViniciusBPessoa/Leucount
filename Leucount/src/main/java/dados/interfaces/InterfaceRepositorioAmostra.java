@@ -7,7 +7,7 @@ import java.util.Map;
 public interface InterfaceRepositorioAmostra {
 
 
-    void incerir(Amostra amostra);
+    void inserir(Amostra amostra);
 
     void remover(Amostra amostra);
 

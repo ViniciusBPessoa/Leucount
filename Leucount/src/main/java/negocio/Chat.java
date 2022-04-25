@@ -22,7 +22,7 @@ public class Chat implements InterfaceChat {
     }
 
     @Override
-    public void incerirMSG(String usuario, String msg){
+    public void inserirMSG(String usuario, String msg){
         Pair<String, String> novaMSG = new Pair<>(usuario, msg);
         this.chats.add(novaMSG);
     }

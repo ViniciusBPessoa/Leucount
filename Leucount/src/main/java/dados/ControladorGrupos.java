@@ -17,13 +17,13 @@ public class ControladorGrupos implements InterfaceControladorGrupos {
     public ControladorGrupos(){} /* carregar os arquivos .dat */
 
     @Override
-    public void Inserir(Grupos chat){
+    public void inserir(Grupos chat){
         this.grupos.clear();
         this.grupos.add(chat);
     }
 
     @Override
-    public void Deletar(){  /* sem considerar nenhuma exeção */
+    public void deletar(){  /* sem considerar nenhuma exeção */
         this.grupos.clear();
     }
 

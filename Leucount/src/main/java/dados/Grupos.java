@@ -19,12 +19,12 @@ public class Grupos implements InterfaceGrupos {
     }
 
     @Override
-    public void incerirUsuario(String idUsuario){
+    public void inserirUsuario(String idUsuario){
         this.idUsuarios.add(idUsuario);
     }
 
     @Override
-    public void incerirAmostra(String idAmostra){
+    public void inserirAmostra(String idAmostra){
         this.idAmostras.add(idAmostra);
     }
 

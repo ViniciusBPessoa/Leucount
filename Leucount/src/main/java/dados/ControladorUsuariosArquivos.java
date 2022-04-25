@@ -17,13 +17,13 @@ public class ControladorUsuariosArquivos implements InterfaceControladorUsuarios
     public ControladorUsuariosArquivos(){} /* carregar os arquivos .dat */
 
     @Override
-    public void Inserir(RepositorioUsuarios repositorio){
+    public void inserir(RepositorioUsuarios repositorio){
         this.usuarios.clear();
         this.usuarios.add(repositorio);
     }
 
     @Override
-    public void Deletar(Usuario usuario){  /* sem considerar nenhuma exeção */
+    public void deletar(Usuario usuario){  /* sem considerar nenhuma exeção */
         usuarios.clear();
     }
 

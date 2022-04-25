@@ -4,17 +4,17 @@ import java.time.LocalDate;
 
 public class Estudante extends Usuario{
 
-    private String tipo = "Estudante";
+    private String titulo = "Estudante";
 
     public Estudante(String nome, String codigo, LocalDate dataNascimento) {
         super(nome, codigo, dataNascimento);
     }
 
     public String getTipo() {
-        return tipo;
+        return titulo;
     }
 
     public void setTipo(String tipo) {
-        this.tipo = tipo;
+        this.titulo = tipo;
     }
 }
