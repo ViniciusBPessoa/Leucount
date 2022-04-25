@@ -1,12 +1,11 @@
 package dados;
 
-import negocio.Amostra;
+import dados.interfaces.InterfaceControladorAmostras;
 import negocio.usuarios.Usuario;
 
 import java.util.ArrayList;
-import java.util.Map;
 
-public class ControladorAmostras {
+public class ControladorAmostras implements InterfaceControladorAmostras {
 
     private ArrayList<RepositoAmostras> amostras; /* Revisar meios de salvamento emarquivo com prof */
 
@@ -16,15 +15,18 @@ public class ControladorAmostras {
 
     public ControladorAmostras(){} /* carregar os arquivos .dat */
 
+    @Override
     public void Inserir(RepositoAmostras repositorio){
         this.amostras.clear();
         this.amostras.add(repositorio);
     }
 
+    @Override
     public void Deletar(Usuario usuario){  /* sem considerar nenhuma exeção */
         this.amostras.clear();
     }
 
+    @Override
     public void salvar(){} /* Responsavel por armazenar em um arquivo */
 
     public ArrayList<RepositoAmostras> getAmostras() {

@@ -1,10 +1,11 @@
 package negocio;
 
+import dados.interfaces.InterfaceChat;
 import javafx.util.Pair;
 
 import java.util.ArrayList;
 
-public class Chat {
+public class Chat implements InterfaceChat {
 
     private ArrayList<Pair<String, String>> chats;
     private String idChat;
@@ -20,6 +21,7 @@ public class Chat {
         this.tipoChat = "Pericles";
     }
 
+    @Override
     public void incerirMSG(String usuario, String msg){
         Pair<String, String> novaMSG = new Pair<>(usuario, msg);
         this.chats.add(novaMSG);

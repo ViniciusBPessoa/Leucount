@@ -1,12 +1,12 @@
 package dados;
 
-import javafx.util.Pair;
+import dados.interfaces.InterfaceControladorUsuariosArquivos;
 import negocio.usuarios.Usuario;
 
 import java.util.ArrayList;
 import java.util.Map;
 
-public class ControladorUsuariosArquivos {
+public class ControladorUsuariosArquivos implements InterfaceControladorUsuariosArquivos {
 
     private ArrayList<RepositorioUsuarios> usuarios; /* Revisar meios de salvamento emarquivo com prof */
 
@@ -16,15 +16,18 @@ public class ControladorUsuariosArquivos {
 
     public ControladorUsuariosArquivos(){} /* carregar os arquivos .dat */
 
+    @Override
     public void Inserir(RepositorioUsuarios repositorio){
         this.usuarios.clear();
         this.usuarios.add(repositorio);
     }
 
+    @Override
     public void Deletar(Usuario usuario){  /* sem considerar nenhuma exeção */
         usuarios.clear();
     }
 
+    @Override
     public void salvar(){} /* Responsavel por armazenar em um arquivo */
 
     public Map<String, Usuario> getUsuarios() {

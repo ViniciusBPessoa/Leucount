@@ -1,8 +1,10 @@
 package dados;
 
+import dados.interfaces.InterfaceGrupos;
+
 import java.util.ArrayList;
 
-public class Grupos {
+public class Grupos implements InterfaceGrupos {
 
     private String grupoNome;
     private String idGrupo;
@@ -16,14 +18,17 @@ public class Grupos {
         this.adm = adm;
     }
 
+    @Override
     public void incerirUsuario(String idUsuario){
         this.idUsuarios.add(idUsuario);
     }
 
+    @Override
     public void incerirAmostra(String idAmostra){
         this.idAmostras.add(idAmostra);
     }
 
+    @Override
     public void removerAmostra(String idAmostra){
         int item = 0;
 
@@ -35,6 +40,7 @@ public class Grupos {
         }this.idAmostras.remove(item);
     }
 
+    @Override
     public void removerUsuario(String idUsuario){
         int item = 0;
 

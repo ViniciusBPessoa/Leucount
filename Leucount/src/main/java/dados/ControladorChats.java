@@ -1,10 +1,11 @@
 package dados;
 
+import dados.interfaces.InterfaceControladorChats;
 import negocio.Chat;
 
 import java.util.ArrayList;
 
-public class ControladorChats {
+public class ControladorChats implements InterfaceControladorChats {
 
     private ArrayList<Chat> chats;
 
@@ -16,15 +17,18 @@ public class ControladorChats {
 
     public ControladorChats(){} /* carregar os arquivos .dat */
 
+    @Override
     public void Inserir(Chat chat){
         this.chats.clear();
         this.chats.add(chat);
     }
 
+    @Override
     public void Deletar(){  /* sem considerar nenhuma exeção */
         chats.clear();
     }
 
+    @Override
     public void salvar(){} /* Responsavel por armazenar em um arquivo */
 
     public ArrayList<Chat> getChats() {
