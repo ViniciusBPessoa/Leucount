@@ -52,11 +52,19 @@ public class Usuario{
         this.dataNascimento = dataNascimento;
     }
 
-    public ArrayList<String> getFeed() {return feed;}
+    public ArrayList<String> getFeed() {
+        return feed;
+    }
 
-    public void setFeed(ArrayList<String> feed) {this.feed = feed;}
+    public void setFeed(ArrayList<String> feed) {
+        this.feed = feed;
+    }
 
-    public ArrayList<Grupos> getGrupos() {return grupos;}
+    public ArrayList<Grupos> getGrupos() {
+        return grupos;
+    }
 
-    public void setGrupos(ArrayList<Grupos> grupos) {this.grupos = grupos;}
+    public void setGrupos(ArrayList<Grupos> grupos) {
+        this.grupos = grupos;
+    }
 }
