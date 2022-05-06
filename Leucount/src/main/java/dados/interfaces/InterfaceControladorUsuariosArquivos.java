@@ -1,7 +1,7 @@
 package dados.interfaces;
 
 import dados.RepositorioUsuarios;
-import negocio.usuarios.Usuario;
+import negocio.social.Usuario;
 
 public interface InterfaceControladorUsuariosArquivos {
 

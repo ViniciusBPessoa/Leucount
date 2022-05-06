@@ -1,7 +1,7 @@
 package dados;
 
 import dados.interfaces.InterfaceControladorUsuariosArquivos;
-import negocio.usuarios.Usuario;
+import negocio.social.Usuario;
 
 import java.util.ArrayList;
 import java.util.Map;

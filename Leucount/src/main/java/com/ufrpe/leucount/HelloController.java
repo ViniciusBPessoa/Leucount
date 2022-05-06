@@ -1,4 +1,4 @@
-package com.leocount.leucount;
+package com.ufrpe.leucount;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

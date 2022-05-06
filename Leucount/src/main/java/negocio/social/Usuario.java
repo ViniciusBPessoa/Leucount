@@ -1,12 +1,11 @@
-package negocio.usuarios;
+package negocio.social;
 
-import dados.Grupos;
-import javafx.util.Pair;
+import negocio.Grupos;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public abstract class Usuario{
+public class Usuario{
 
     private String nome;
     private String codigo;
@@ -53,4 +52,11 @@ public abstract class Usuario{
         this.dataNascimento = dataNascimento;
     }
 
+    public ArrayList<String> getFeed() {return feed;}
+
+    public void setFeed(ArrayList<String> feed) {this.feed = feed;}
+
+    public ArrayList<Grupos> getGrupos() {return grupos;}
+
+    public void setGrupos(ArrayList<Grupos> grupos) {this.grupos = grupos;}
 }

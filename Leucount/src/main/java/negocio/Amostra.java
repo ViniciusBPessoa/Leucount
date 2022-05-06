@@ -1,9 +1,6 @@
 package negocio;
 
-import negocio.usuarios.Profissional;
-
 import java.time.LocalDate;
-import java.util.PrimitiveIterator;
 
 public class Amostra {
 

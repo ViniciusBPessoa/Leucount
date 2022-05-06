@@ -1,7 +1,7 @@
 package dados.interfaces;
 
 import dados.RepositorioAmostras;
-import negocio.usuarios.Usuario;
+import negocio.social.Usuario;
 
 public interface InterfaceControladorAmostras {
     void inserir(RepositorioAmostras repositorio);

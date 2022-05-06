@@ -1,6 +1,6 @@
 package dados.interfaces;
 
-import dados.Grupos;
+import negocio.Grupos;
 
 public interface InterfaceControladorGrupos {
 

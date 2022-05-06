@@ -1,7 +1,7 @@
 package dados;
 
 import dados.interfaces.InterfaceControladorChats;
-import negocio.Chat;
+import negocio.social.Chat;
 
 import java.util.ArrayList;
 

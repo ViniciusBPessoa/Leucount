@@ -1,7 +1,7 @@
 package dados;
 
 import dados.interfaces.InterfaceRepositorioUsuarios;
-import negocio.usuarios.Usuario;
+import negocio.social.Usuario;
 
 import java.util.Map;
 

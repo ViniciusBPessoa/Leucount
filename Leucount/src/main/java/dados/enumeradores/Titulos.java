@@ -3,7 +3,8 @@ package dados.enumeradores;
 public enum Titulos {
 
     Gerente("Gerente"),
-    Analista("Analista");
+    Analista("Analista"),
+    Estudante("Estudante");
 
     private String titulo;
 

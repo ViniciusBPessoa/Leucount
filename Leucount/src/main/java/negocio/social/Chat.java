@@ -1,4 +1,4 @@
-package negocio;
+package negocio.social;
 
 import dados.interfaces.InterfaceChat;
 import javafx.util.Pair;
@@ -18,7 +18,7 @@ public class Chat implements InterfaceChat {
 
     public Chat(String idChat) {
         this.idChat = idChat;
-        this.tipoChat = "Pericles";
+        this.tipoChat.equals("Pericles");
     }
 
     @Override

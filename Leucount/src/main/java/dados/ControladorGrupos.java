@@ -1,6 +1,7 @@
 package dados;
 
 import dados.interfaces.InterfaceControladorGrupos;
+import negocio.Grupos;
 
 import java.util.ArrayList;
 

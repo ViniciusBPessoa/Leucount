@@ -1,6 +1,6 @@
 package dados.interfaces;
 
-import negocio.usuarios.Usuario;
+import negocio.social.Usuario;
 
 public interface InterfaceRepositorioUsuarios {
 

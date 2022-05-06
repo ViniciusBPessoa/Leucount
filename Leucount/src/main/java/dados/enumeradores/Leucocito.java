@@ -1,6 +1,6 @@
 package dados.enumeradores;
 
-public enum Leucocitos {
+public enum Leucocito {
 
     Monocito("Monócitos"),
     Eosinofilo("Eosinofilo"),
@@ -19,7 +19,7 @@ public enum Leucocitos {
 
     private String leucocitos;
 
-    Leucocitos(String leucocitos) {
+    Leucocito(String leucocitos) {
         this.leucocitos = leucocitos;
     }
 

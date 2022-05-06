@@ -1,6 +1,6 @@
 package dados.interfaces;
 
-import negocio.Chat;
+import negocio.social.Chat;
 
 public interface InterfaceControladorChats {
     void Inserir(Chat chat);
