@@ -1,5 +1,6 @@
-package com.ufrpe.leucount;
+package com.ufrpe.leucount.controladores;
 
+import com.ufrpe.leucount.MainClass;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
@@ -10,7 +11,7 @@ public class HelloController {
     @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("ff");
-        HelloApplication.abb();
+        MainClass.abb();
     }
 
     public Label getWelcomeText() {

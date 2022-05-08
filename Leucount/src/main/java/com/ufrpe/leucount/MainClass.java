@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class MainClass extends Application {
 
     private static Stage stage;
 
@@ -21,8 +21,8 @@ public class HelloApplication extends Application {
 
         stage = stageg;
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("minha.fxml"));
-        FXMLLoader hallo = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainClass.class.getResource("minha.fxml"));
+        FXMLLoader hallo = new FXMLLoader(MainClass.class.getResource("hello-view.fxml"));
 
         scene = new Scene(fxmlLoader.load(), x, y);
         minhah = new Scene(hallo.load(), x, y);

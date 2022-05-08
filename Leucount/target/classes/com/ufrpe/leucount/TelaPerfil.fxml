@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="-10.0" layoutY="-4.0" prefHeight="408.0" prefWidth="200.0">
+         <children>
+            <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perfil">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informações Pessoais" />
+            <Avatar />
+         </children>
+      </Pane>
+      <TabPane layoutX="204.0" layoutY="-4.0" prefHeight="422.0" prefWidth="397.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Histórico de Atividades" />
+          <Tab text="Minhas amostras">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="393.0" prefWidth="406.0" />
+            </content>
+          </Tab>
+            <Tab text="Publicações">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Avatar layoutX="515.0" layoutY="201.0" />
+      <Avatar layoutX="512.0" layoutY="204.0" />
+      <Avatar />
+      <AmbientLight color="CHARTREUSE" layoutX="459.0" layoutY="212.0" lightOn="true" />
+      <ListView layoutX="381.0" layoutY="261.0" prefHeight="200.0" prefWidth="200.0" />
+      <DatePicker layoutX="402.0" layoutY="366.0" />
+   </children>
+</Pane>

@@ -8,4 +8,6 @@ module com.ufrpe.leucount {
 
     opens com.ufrpe.leucount to javafx.fxml;
     exports com.ufrpe.leucount;
+    exports com.ufrpe.leucount.controladores;
+    opens com.ufrpe.leucount.controladores to javafx.fxml;
 }

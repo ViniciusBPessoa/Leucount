@@ -1,5 +1,6 @@
-package com.ufrpe.leucount;
+package com.ufrpe.leucount.controladores;
 
+import com.ufrpe.leucount.MainClass;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -23,7 +24,7 @@ public class controle {
     @FXML
     public void bf(){
 
-        HelloApplication.abrirpop();
+        MainClass.abrirpop();
 
     }
 
