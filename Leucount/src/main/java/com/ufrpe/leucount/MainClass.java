@@ -1,5 +1,6 @@
 package com.ufrpe.leucount;
 
+import dados.RepositorioUsuarios;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -9,6 +10,10 @@ import negocio.social.Usuario;
 import java.io.IOException;
 
 public class MainClass extends Application {
+
+    public static RepositorioUsuarios usuarios;
+
+    private static Usuario user;
 
     private static Stage stage;
 
@@ -61,7 +66,17 @@ public class MainClass extends Application {
     }
 
     public static void main(String[] args) {
+
+        usuarios = new RepositorioUsuarios();
+
         launch();
     }
 
+    public static Usuario getUser() {
+        return user;
+    }
+
+    public static void setUser(Usuario user) {
+        MainClass.user = user;
+    }
 }

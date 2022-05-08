@@ -1,10 +1,12 @@
 package com.ufrpe.leucount.controladores;
 
 import com.ufrpe.leucount.MainClass;
+import dados.RepositorioUsuarios;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import negocio.social.Usuario;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -32,19 +34,33 @@ public class ControladorCadastro implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
 
-        titulo.setItems(FXCollections.observableArrayList("Pessoa"));
+        titulo.setItems(FXCollections.observableArrayList("Gerente", "Analista", "Estudante"));
 
     }
 
     @FXML
     public void concluirButton(){
 
-        if (usuario.getText().equals("") || senha.getText().equals("") || senhaConf.getText().equals("") || dataNascimento.getValue() == null){
+        if (usuario.getText().equals("") || senha.getText().equals("") || senhaConf.getText().equals("") || dataNascimento.getValue() == null || titulo.getValue() == null) {
             radPlot.setText("Por favor, preencha todos os campos");
         }else {
             radPlot.setText("");
 
             if (senha.getText().equals(senhaConf.getText())){
+
+                Usuario user = new Usuario(usuario.getText(), senha.getText(), dataNascimento.getValue());
+                MainClass.usuarios.inserir(user);
+
+                Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+                alerta.setTitle("Confimação!!");
+                alerta.setHeaderText("Seu perfil foi criado com sucesso!!");
+                alerta.show();
+
+                usuario.clear();
+                senha.clear();
+                senhaConf.clear();
+
+                MainClass.trocaTela("loginCena");
 
             }else {
                 radPlot.setText("As senhas não são iguais");

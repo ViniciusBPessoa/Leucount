@@ -1,5 +1,6 @@
 package negocio.social;
 
+import dados.aleatorio.CodeCriator;
 import negocio.Grupos;
 
 import java.time.LocalDate;
@@ -15,10 +16,23 @@ public class Usuario{
     private ArrayList<Grupos> grupos;
 
 
-    public Usuario(String nome, String codigo, LocalDate dataNascimento) {
+    public Usuario(String nome, String senha , LocalDate dataNascimento) {
         this.nome = nome;
-        this.codigo = codigo;
+        this.senha = senha;
         this.dataNascimento = dataNascimento;
+        this.codigo = CodeCriator.aleatorio();
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "nome='" + nome + '\'' +
+                ", codigo='" + codigo + '\'' +
+                ", senha='" + senha + '\'' +
+                ", dataNascimento=" + dataNascimento +
+                ", feed=" + feed +
+                ", grupos=" + grupos +
+                '}';
     }
 
     public void adicionarGrupo(){}

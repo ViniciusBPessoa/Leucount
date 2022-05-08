@@ -3,11 +3,12 @@ package dados;
 import dados.interfaces.InterfaceRepositorioUsuarios;
 import negocio.social.Usuario;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class RepositorioUsuarios implements InterfaceRepositorioUsuarios {
 
-    private Map <String, Usuario> usuarios;
+    private Map <String, Usuario> usuarios = new HashMap<>();
 
     public RepositorioUsuarios(Map<String, Usuario> usuarios) {
 
@@ -18,7 +19,7 @@ public class RepositorioUsuarios implements InterfaceRepositorioUsuarios {
 
     @Override
     public void inserir(Usuario usuario){
-        this.usuarios.put(usuario.getCodigo(), usuario); /* Ainda sem tratamento de exceção */
+        this.usuarios.put(usuario.getNome() + usuario.getSenha(), usuario); /* Ainda sem tratamento de exceção */
     }
 
     @Override
@@ -30,6 +31,11 @@ public class RepositorioUsuarios implements InterfaceRepositorioUsuarios {
     @Override
     public Usuario buscar(String codigo){
         Usuario usuario = this.usuarios.get(codigo);
+        return usuario;
+    }
+
+    public boolean buscarContaBoolean(String codigo){
+        boolean usuario = this.usuarios.containsKey(codigo);
         return usuario;
     }
 
