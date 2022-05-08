@@ -28,12 +28,10 @@ public class MainClass extends Application {
         FXMLLoader loginTela = new FXMLLoader(MainClass.class.getResource("TelaLogin.fxml"));
         FXMLLoader cadastroTela = new FXMLLoader(MainClass.class.getResource("TelaCadastro.fxml"));
         FXMLLoader chatTela = new FXMLLoader(MainClass.class.getResource("TelaChat.fxml"));
-        FXMLLoader perfilTela = new FXMLLoader(MainClass.class.getResource("TelaPerfil.fxml"));
 
         logingCena = new Scene(loginTela.load(), loginx, loginy);
         cadastroCena = new Scene(cadastroTela.load(), loginx, loginy);
         chatCena = new Scene(chatTela.load(), loginx, loginy);
-        perfilCena = new Scene(perfilTela.load(), loginx, loginy);
 
         stage.setTitle("Leucount");
         stage.setScene(logingCena);
@@ -65,4 +63,5 @@ public class MainClass extends Application {
     public static void main(String[] args) {
         launch();
     }
+
 }

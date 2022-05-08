@@ -9,6 +9,7 @@ public class Usuario{
 
     private String nome;
     private String codigo;
+    private String senha;
     private LocalDate dataNascimento;
     private ArrayList<String> feed;
     private ArrayList<Grupos> grupos;
@@ -66,5 +67,13 @@ public class Usuario{
 
     public void setGrupos(ArrayList<Grupos> grupos) {
         this.grupos = grupos;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 }

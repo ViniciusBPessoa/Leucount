@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 public class LoginControlador {
 
     @FXML
-    public void cadastroButton(){
+    public void cadastroButton() {
 
         MainClass.trocaTela("cadastroCena");
 

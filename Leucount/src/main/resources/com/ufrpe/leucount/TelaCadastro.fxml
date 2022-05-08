@@ -1,52 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ufrpe.leucount.controladores.CadastroControlador">
-   <children>
-      <Text layoutX="159.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leucount" textAlignment="JUSTIFY">
-         <font>
-            <Font name="System Bold" size="52.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="DEFAULT" />
-         </cursor>
-      </Text>
-      <Button layoutX="255.0" layoutY="330.0" mnemonicParsing="false" style="-fx-background-color: #02307a; -fx-background-radius: 12;" text="Cadastrar-se" textFill="WHITE" />
-      <Text layoutX="393.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contagem diferenccial leucocitária" wrappingWidth="75.19792175292969" />
-      <DatePicker layoutX="228.0" layoutY="248.0" prefHeight="25.0" prefWidth="149.0" promptText="Data de Nascimento" />
-      <ChoiceBox fx:id="ChoiceBoxTitulos" accessibleRole="CHECK_BOX" layoutX="228.0" layoutY="285.0" prefWidth="150.0" />
-      <Text layoutX="184.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro | Informações Pessoais" />
-      <Text layoutX="469.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Você ja possui uma conta?" wrappingWidth="83.0" />
-      <VBox layoutX="178.0" layoutY="137.0" prefHeight="103.0" prefWidth="250.0">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ufrpe.leucount.controladores.ControladorCadastro">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField promptText="Usuário" style="-fx-background-radius: 5;">
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-            </TextField>
-            <PasswordField promptText="Senha" style="-fx-background-radius: 5;">
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-            </PasswordField>
-            <PasswordField promptText="Confirmar senha" style="-fx-background-radius: 5;">
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-            </PasswordField>
+            <Text layoutX="137.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leucount">
+               <font>
+                  <Font name="System Bold" size="54.0" />
+               </font>
+            </Text>
+            <Text layoutX="389.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contagem diferenccial leucocitária" wrappingWidth="82.2734375" />
+            <Text layoutX="182.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro | Informações Pessoais" />
+            <VBox layoutX="182.0" layoutY="144.0" prefHeight="93.0" prefWidth="239.0">
+               <children>
+                  <TextField fx:id="usuario" promptText="Usuário" style="-fx-background-radius: 8;">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <PasswordField fx:id="senha" promptText="Senha" style="-fx-background-radius: 8;">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <PasswordField fx:id="senhaConf" promptText="Confirmar Senha" style="-fx-background-radius: 8;" />
+               </children>
+            </VBox>
+            <DatePicker fx:id="dataNascimento" layoutX="215.0" layoutY="247.0" />
+            <ComboBox layoutX="225.0" layoutY="280.0" prefWidth="150.0" />
+            <Button layoutX="272.0" layoutY="319.0" mnemonicParsing="false" onAction="#concluirButton" style="-fx-background-color: #02307a; -fx-background-radius: 15;" text="Concluir" textFill="WHITE" />
+            <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#logButton" style="-fx-background-color: #02307a; -fx-background-radius: 15;" text="Voltar" textFill="WHITE" />
+            <Label layoutX="205.0" layoutY="365.0" />
          </children>
-      </VBox>
-      <Button layoutX="485.0" layoutY="188.0" mnemonicParsing="false" onAction="#logButton" style="-fx-background-color: #02307a; -fx-background-radius: 12;" text="Login" textFill="WHITE" />
-   </children>
-</AnchorPane>
+      </AnchorPane>
+   </center>
+</BorderPane>
