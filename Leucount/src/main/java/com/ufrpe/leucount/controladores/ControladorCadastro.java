@@ -24,15 +24,16 @@ public class ControladorCadastro {
     @FXML
     private Label radPlot;
 
-
     @FXML
     public void concluirButton(){
 
-        if (usuario.getText().equals("") || senha.getText().equals("") || senhaConf.getText().equals("")){
-
-            radPlot.setText("Por favor preencha todos os campos");
+        if (usuario.getText().equals("") || senha.getText().equals("") || senhaConf.getText().equals("") || dataNascimento.getValue() == null){
+            radPlot.setText("Por favor, preencha todos os campos");
         }else {
             radPlot.setText("");
+
+
+
         }
 
     }
