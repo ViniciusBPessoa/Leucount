@@ -1,13 +1,15 @@
 package com.ufrpe.leucount.controladores;
 
 import com.ufrpe.leucount.MainClass;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 
-public class ControladorCadastro {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class ControladorCadastro implements Initializable {
 
     @FXML
     private TextField usuario;
@@ -25,6 +27,16 @@ public class ControladorCadastro {
     private Label radPlot;
 
     @FXML
+    private ComboBox<String> titulo;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle){
+
+        titulo.setItems(FXCollections.observableArrayList("Pessoa"));
+
+    }
+
+    @FXML
     public void concluirButton(){
 
         if (usuario.getText().equals("") || senha.getText().equals("") || senhaConf.getText().equals("") || dataNascimento.getValue() == null){
@@ -32,7 +44,12 @@ public class ControladorCadastro {
         }else {
             radPlot.setText("");
 
+            if (senha.getText().equals(senhaConf.getText())){
 
+            }else {
+                radPlot.setText("As senhas não são iguais");
+                senhaConf.clear();
+            }
 
         }
 
