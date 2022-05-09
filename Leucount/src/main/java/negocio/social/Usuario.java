@@ -4,6 +4,7 @@ import dados.aleatorio.CodeCriator;
 import negocio.Grupos;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
 public class Usuario{
@@ -12,15 +13,24 @@ public class Usuario{
     private String codigo;
     private String senha;
     private LocalDate dataNascimento;
+    private String titulo;
     private ArrayList<String> feed;
     private ArrayList<Grupos> grupos;
 
 
-    public Usuario(String nome, String senha , LocalDate dataNascimento) {
+    public Usuario(String nome, String senha , LocalDate dataNascimento, String titulo) {
         this.nome = nome;
         this.senha = senha;
         this.dataNascimento = dataNascimento;
+        this.titulo = titulo;
         this.codigo = CodeCriator.aleatorio();
+    }
+
+    public long idade(){
+
+        LocalDate agora = LocalDate.now();
+
+        return ChronoUnit.YEARS.between(agora, dataNascimento);
     }
 
     @Override
@@ -89,5 +99,13 @@ public class Usuario{
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 }

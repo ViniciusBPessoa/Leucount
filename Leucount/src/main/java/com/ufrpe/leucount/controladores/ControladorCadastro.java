@@ -48,7 +48,7 @@ public class ControladorCadastro implements Initializable {
 
             if (senha.getText().equals(senhaConf.getText())){
 
-                Usuario user = new Usuario(usuario.getText(), senha.getText(), dataNascimento.getValue());
+                Usuario user = new Usuario(usuario.getText(), senha.getText(), dataNascimento.getValue(), titulo.getValue());
                 MainClass.usuarios.inserir(user);
 
                 Alert alerta = new Alert(Alert.AlertType.INFORMATION);

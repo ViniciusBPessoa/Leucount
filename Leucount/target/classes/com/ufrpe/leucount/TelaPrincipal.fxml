@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ufrpe.leucount.controladores.PrincipalTelaControlador">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="146.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feed de Postagens">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <ScrollPane layoutX="-5.0" layoutY="50.0" prefHeight="348.0" prefWidth="454.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="450.0" />
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="151.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Página Inicial">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <VBox layoutX="11.0" layoutY="57.0" prefHeight="3.0" prefWidth="129.0">
+               <children>
+                  <Hyperlink alignment="TOP_CENTER" prefHeight="23.0" prefWidth="130.0" text="Nova Amostra" />
+                  <Hyperlink alignment="TOP_CENTER" onAction="#novopost" prefHeight="23.0" prefWidth="130.0" text="Novo Post" />
+                  <Hyperlink alignment="TOP_CENTER" onAction="#perfil" prefHeight="23.0" prefWidth="130.0" text="Meu Perfil" />
+                  <Hyperlink alignment="TOP_CENTER" prefHeight="23.0" prefWidth="130.0" text="Grupos" />
+                  <Hyperlink alignment="TOP_CENTER" prefHeight="23.0" prefWidth="130.0" text="Conversas" />
+                  <Hyperlink alignment="TOP_CENTER" onAction="#sair" prefHeight="23.0" prefWidth="130.0" text="Sair" />
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <Bloom />
+         </effect>
+      </AnchorPane>
+   </left>
+</BorderPane>

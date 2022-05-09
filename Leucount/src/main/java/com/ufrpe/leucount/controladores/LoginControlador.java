@@ -4,7 +4,6 @@ import com.ufrpe.leucount.MainClass;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import negocio.social.Usuario;
 
 public class LoginControlador {
 
@@ -27,7 +26,7 @@ public class LoginControlador {
             if (MainClass.usuarios.buscarContaBoolean(codigo)){
 
                 MainClass.setUser(MainClass.usuarios.buscar(codigo));
-                System.out.println(MainClass.getUser());
+                MainClass.trocaTela("telaPrincipalCena");
 
             }else {
                 redText.setText("Usuario não cadastrado");
