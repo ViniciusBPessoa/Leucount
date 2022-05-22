@@ -1,6 +1,7 @@
 package com.ufrpe.leucount.controladores;
 
 import com.ufrpe.leucount.MainClass;
+import com.ufrpe.leucount.ScreenManager;
 import dados.RepositorioUsuarios;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -8,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import negocio.social.Usuario;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -39,7 +41,7 @@ public class ControladorCadastro implements Initializable {
     }
 
     @FXML
-    public void concluirButton(){
+    public void concluirButton() throws IOException {
 
         if (usuario.getText().equals("") || senha.getText().equals("") || senhaConf.getText().equals("") || dataNascimento.getValue() == null || titulo.getValue() == null) {
             radPlot.setText("Por favor, preencha todos os campos");
@@ -56,11 +58,11 @@ public class ControladorCadastro implements Initializable {
                 alerta.setHeaderText("Seu perfil foi criado com sucesso!!");
                 alerta.show();
 
+                ScreenManager.getInstancia().trocatela("loginTela");
+
                 usuario.clear();
                 senha.clear();
                 senhaConf.clear();
-
-                MainClass.trocaTela("loginCena");
 
             }else {
                 radPlot.setText("As senhas não são iguais");
@@ -72,8 +74,8 @@ public class ControladorCadastro implements Initializable {
     }
 
     @FXML
-    public void logButton(){
-        MainClass.trocaTela("loginCena");
+    public void logButton() throws IOException {
+        ScreenManager.getInstancia().trocatela("loginTela");
     }
 
     public TextField getUsuario() {

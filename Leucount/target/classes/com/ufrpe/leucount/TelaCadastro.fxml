@@ -17,14 +17,14 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Text layoutX="137.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leucount">
+            <Text layoutX="136.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leucount" AnchorPane.rightAnchor="229.2265625" AnchorPane.topAnchor="13.728515625">
                <font>
                   <Font name="System Bold" size="54.0" />
                </font>
             </Text>
-            <Text layoutX="389.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contagem diferenccial leucocitária" wrappingWidth="82.2734375" />
-            <Text layoutX="182.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro | Informações Pessoais" />
-            <VBox layoutX="182.0" layoutY="144.0" prefHeight="93.0" prefWidth="239.0">
+            <Text layoutX="389.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contagem diferenccial leucocitária" wrappingWidth="82.2734375" AnchorPane.rightAnchor="128.7265625" AnchorPane.topAnchor="37.0" />
+            <Text layoutX="169.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro | Informações Pessoais" AnchorPane.rightAnchor="261.55859375" AnchorPane.topAnchor="77.05078125" />
+            <VBox layoutX="182.0" layoutY="144.0" prefHeight="93.0" prefWidth="239.0" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="179.0" AnchorPane.topAnchor="144.0">
                <children>
                   <TextField fx:id="usuario" promptText="Usuário" style="-fx-background-radius: 8;">
                      <VBox.margin>
@@ -39,11 +39,27 @@
                   <PasswordField fx:id="senhaConf" promptText="Confirmar Senha" style="-fx-background-radius: 8;" />
                </children>
             </VBox>
-            <DatePicker fx:id="dataNascimento" layoutX="215.0" layoutY="247.0" />
-            <ComboBox fx:id="titulo" layoutX="225.0" layoutY="280.0" prefWidth="150.0" />
-            <Button layoutX="272.0" layoutY="319.0" mnemonicParsing="false" onAction="#concluirButton" style="-fx-background-color: #02307a; -fx-background-radius: 15;" text="Concluir" textFill="WHITE" />
-            <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#logButton" style="-fx-background-color: #02307a; -fx-background-radius: 15;" text="Voltar" textFill="WHITE" />
+            <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#logButton" style="-fx-background-color: #02307a; -fx-background-radius: 15;" text="Voltar" textFill="WHITE" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="14.0" />
             <Label fx:id="radPlot" layoutX="205.0" layoutY="365.0" textFill="#fc0808" />
+            <VBox layoutX="283.0" layoutY="237.0" prefHeight="200.0" prefWidth="211.0" AnchorPane.leftAnchor="283.0" AnchorPane.rightAnchor="106.0" AnchorPane.topAnchor="237.0">
+               <children>
+                  <DatePicker fx:id="dataNascimento" prefHeight="35.0" prefWidth="236.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </DatePicker>
+                  <ComboBox fx:id="titulo" prefHeight="25.0" prefWidth="170.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="25.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Button mnemonicParsing="false" onAction="#concluirButton" style="-fx-background-color: #02307a; -fx-background-radius: 15;" text="Concluir" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="70.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
          </children>
       </AnchorPane>
    </center>

@@ -1,9 +1,13 @@
 package com.ufrpe.leucount.controladores;
 
 import com.ufrpe.leucount.MainClass;
+import com.ufrpe.leucount.ScreenManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import negocio.social.LogUser;
+
+import java.io.IOException;
 
 public class LoginControlador {
 
@@ -17,7 +21,7 @@ public class LoginControlador {
     private Label redText;
 
     @FXML
-    public void entrar(){
+    public void entrar() throws IOException {
         if (usuario.getText().equals("") || senha.getText().equals("")){
             redText.setText("Por favor digite em todos os campos");
         }else {
@@ -25,8 +29,8 @@ public class LoginControlador {
 
             if (MainClass.usuarios.buscarContaBoolean(codigo)){
 
-                MainClass.setUser(MainClass.usuarios.buscar(codigo));
-                MainClass.trocaTela("telaPrincipalCena");
+                LogUser.setLogUser(MainClass.usuarios.buscar(codigo));
+                ScreenManager.getInstancia().trocatela("principalTela");
 
             }else {
                 redText.setText("Usuario não cadastrado");
@@ -35,9 +39,9 @@ public class LoginControlador {
     }
 
     @FXML
-    public void cadastroButton() {
+    public void cadastroButton() throws IOException {
 
-        MainClass.trocaTela("cadastroCena");
+        ScreenManager.getInstancia().trocatela("cadastroTela");
 
     }
 

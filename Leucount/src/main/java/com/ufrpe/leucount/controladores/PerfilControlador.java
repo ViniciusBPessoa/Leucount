@@ -2,11 +2,8 @@ package com.ufrpe.leucount.controladores;
 
 import com.ufrpe.leucount.MainClass;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class PerfilControlador {
 
@@ -24,22 +21,9 @@ public class PerfilControlador {
 
     @FXML
     public void voltar(){
-        MainClass.trocaTela("telaPrincipalCena");
     }
 
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        String texto = nome.getText();
-        nome.setText(texto + MainClass.getUser().getNome());
-
-        texto = idade.getText();
-        idade.setText(texto + MainClass.getUser().idade());
-
-        texto = titulo.getText();
-        titulo.setText(texto + MainClass.getUser().getTitulo());
-
-        texto = codigo.getText();
-        codigo.setText(texto + MainClass.getUser().getCodigo());
+    public void initialize() {
 
     }
 
