@@ -1,15 +1,12 @@
 package com.ufrpe.leucount;
 
-import dados.RepositorioUsuarios;
-import dados.interfaces.InterfaceRepositorioUsuarios;
+import dados.ControladorUsuarios;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class MainClass extends Application {
-
-    public static InterfaceRepositorioUsuarios usuarios;
 
     private int mainx = 832;
     private int mainy = 656;
@@ -32,7 +29,7 @@ public class MainClass extends Application {
 
     public static void main(String[] args) throws IOException {
 
-        usuarios = new RepositorioUsuarios();
+        ControladorUsuarios.getInstancea();
         MainClass.launch(args);
 
     }

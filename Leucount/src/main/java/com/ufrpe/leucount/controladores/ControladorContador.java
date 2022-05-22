@@ -1,5 +1,6 @@
-package dados;
+package com.ufrpe.leucount.controladores;
 
+import dados.RepositorioContador;
 import dados.interfaces.InterfaceControlContador;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

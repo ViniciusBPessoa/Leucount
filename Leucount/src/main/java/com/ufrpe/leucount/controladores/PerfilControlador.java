@@ -1,14 +1,14 @@
 package com.ufrpe.leucount.controladores;
 
-import com.ufrpe.leucount.MainClass;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import negocio.social.LogUser;
 
 
 public class PerfilControlador {
 
     @FXML
-    private static Label nome;
+    private Label name;
 
     @FXML
     private Label idade;
@@ -25,14 +25,35 @@ public class PerfilControlador {
 
     public void initialize() {
 
+        if (LogUser.getLogInstancia() != null) {
+            String age = idade.getText();
+            idade.setText(age + " \n" + LogUser.getLogInstancia().getLogUser().idade());
+
+            name.setText(LogUser.getLogInstancia().getLogUser().getNome());
+
+            String cargo = titulo.getText();
+            titulo.setText(cargo + " \n" + LogUser.getLogInstancia().getLogUser().getTitulo());
+
+            String num = codigo.getText();
+            codigo.setText(num + " \n" + LogUser.getLogInstancia().getLogUser().getCodigo());
+        }
+
     }
 
-    public Label getNome() {
-        return nome;
+    public Label getName() {
+        return name;
     }
 
-    public void setNome(Label nome) {
-        this.nome = nome;
+    public void setName(Label name) {
+        this.name = name;
+    }
+
+    public Label getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Label codigo) {
+        this.codigo = codigo;
     }
 
     public Label getIdade() {

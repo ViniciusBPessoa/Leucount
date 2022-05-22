@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -18,11 +17,6 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
-            <ScrollPane layoutX="-5.0" layoutY="50.0" prefHeight="348.0" prefWidth="454.0">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="450.0" />
-              </content>
-            </ScrollPane>
          </children>
       </AnchorPane>
    </center>

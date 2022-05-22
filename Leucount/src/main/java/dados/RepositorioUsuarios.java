@@ -3,15 +3,15 @@ package dados;
 import dados.interfaces.InterfaceRepositorioUsuarios;
 import negocio.social.Usuario;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RepositorioUsuarios implements InterfaceRepositorioUsuarios {
+public class RepositorioUsuarios implements InterfaceRepositorioUsuarios, Serializable {
 
-    private Map <String, Usuario> usuarios = new HashMap<>();
+    private HashMap <String, Usuario> usuarios = new HashMap<>();
 
-    public RepositorioUsuarios(Map<String, Usuario> usuarios) {
-
+    public RepositorioUsuarios(HashMap<String, Usuario> usuarios) {
         this.usuarios = usuarios;
     }
 
@@ -30,21 +30,19 @@ public class RepositorioUsuarios implements InterfaceRepositorioUsuarios {
 
     @Override
     public Usuario buscar(String codigo){
-        Usuario usuario = this.usuarios.get(codigo);
-        return usuario;
+        return this.usuarios.get(codigo);
     }
 
     @Override
     public boolean buscarContaBoolean(String codigo){
-        boolean usuario = this.usuarios.containsKey(codigo);
-        return usuario;
+        return this.usuarios.containsKey(codigo);
     }
 
-    public Map<String, Usuario> getUsuarios() {
+    public HashMap<String, Usuario> getUsuarios() {
         return usuarios;
     }
 
-    public void setUsuarios(Map<String, Usuario> usuarios) {
+    public void setUsuarios(HashMap<String, Usuario> usuarios) {
         this.usuarios = usuarios;
     }
 

@@ -78,17 +78,18 @@ public class ScreenManager {
 
     }
 
-    public void trocatela(String tela){
-        switch (tela){
-
+    public void trocatela(String tela) throws IOException {
+        switch (tela) {
             case "cadastroTela" -> this.getPrimaryStage().setScene(cadastroCena);
 
             case "loginTela" -> this.getPrimaryStage().setScene(logingCena);
 
             case "principalTela" -> this.getPrimaryStage().setScene(principalCena);
 
-            case "perfilTela" -> this.getPrimaryStage().setScene(perfilCena);
-
+            case "perfilTela" -> {
+                this.getPrimaryStage().setScene(perfilCena);
+                ScreenManager.getInstancia().getPerfilControladorCena().initialize();
+            }
         }
     }
 

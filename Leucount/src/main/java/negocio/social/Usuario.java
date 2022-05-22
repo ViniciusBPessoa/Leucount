@@ -3,11 +3,12 @@ package negocio.social;
 import dados.aleatorio.CodeCriator;
 import negocio.Grupos;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
-public class Usuario{
+public class Usuario implements Serializable {
 
     private String nome;
     private String codigo;
@@ -30,7 +31,7 @@ public class Usuario{
 
         LocalDate agora = LocalDate.now();
 
-        return ChronoUnit.YEARS.between(agora, dataNascimento);
+        return ChronoUnit.YEARS.between(dataNascimento, agora);
     }
 
     @Override

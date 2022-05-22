@@ -1,8 +1,7 @@
 package com.ufrpe.leucount.controladores;
 
-import com.ufrpe.leucount.MainClass;
 import com.ufrpe.leucount.ScreenManager;
-import dados.RepositorioUsuarios;
+import dados.ControladorUsuarios;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -51,7 +50,8 @@ public class ControladorCadastro implements Initializable {
             if (senha.getText().equals(senhaConf.getText())){
 
                 Usuario user = new Usuario(usuario.getText(), senha.getText(), dataNascimento.getValue(), titulo.getValue());
-                MainClass.usuarios.inserir(user);
+                ControladorUsuarios.getInstancea().getUsuarios().inserir(user);
+                ControladorUsuarios.getInstancea().salvar();
 
                 Alert alerta = new Alert(Alert.AlertType.INFORMATION);
                 alerta.setTitle("Confimação!!");

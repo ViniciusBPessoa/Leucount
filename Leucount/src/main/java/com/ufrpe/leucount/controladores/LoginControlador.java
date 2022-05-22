@@ -1,7 +1,7 @@
 package com.ufrpe.leucount.controladores;
 
-import com.ufrpe.leucount.MainClass;
 import com.ufrpe.leucount.ScreenManager;
+import dados.ControladorUsuarios;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -27,9 +27,9 @@ public class LoginControlador {
         }else {
             String codigo = usuario.getText() + senha.getText();
 
-            if (MainClass.usuarios.buscarContaBoolean(codigo)){
+            if (ControladorUsuarios.getInstancea().getUsuarios().buscarContaBoolean(codigo)){
 
-                LogUser.getInstancia(MainClass.usuarios.buscar(codigo));
+                LogUser.getInstancia(ControladorUsuarios.getInstancea().getUsuarios().buscar(codigo));
                 ScreenManager.getInstancia().trocatela("principalTela");
 
             }else {

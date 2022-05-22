@@ -10,14 +10,14 @@ public class PrincipalTelaControlador {
 
     @FXML
     public void sair(ActionEvent event) throws IOException {
-
         ScreenManager.getInstancia().trocatela("loginTela");
-
-
     }
 
     @FXML
-    public void perfil(ActionEvent event){
+    public void perfil(ActionEvent event) throws IOException {
+
+        ScreenManager.getInstancia().trocatela("perfilTela");
+
     }
 
     @FXML
