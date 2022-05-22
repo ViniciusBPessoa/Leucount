@@ -9,4 +9,6 @@ public interface InterfaceRepositorioUsuarios {
     void deletar(String codigo);
 
     Usuario buscar(String codigo);
+
+    boolean buscarContaBoolean(String codigo);
 }

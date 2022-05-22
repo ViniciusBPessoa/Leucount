@@ -6,20 +6,14 @@ import negocio.social.Usuario;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class ControladorUsuariosArquivos implements InterfaceControladorUsuariosArquivos {
+public class ControladorUsuarios implements InterfaceControladorUsuariosArquivos {
 
-    private ArrayList<RepositorioUsuarios> usuarios; /* Revisar meios de salvamento emarquivo com prof */
+    private RepositorioUsuarios usuarios; /* Revisar meios de salvamento emarquivo com prof */
 
-    public ControladorUsuariosArquivos(ArrayList<RepositorioUsuarios> usuarios) {
-        this.usuarios = usuarios;
-    }
-
-    public ControladorUsuariosArquivos(){} /* carregar os arquivos .dat */
 
     @Override
-    public void inserir(RepositorioUsuarios repositorio){
-        this.usuarios.clear();
-        this.usuarios.add(repositorio);
+    public void inserir(RepositorioUsuarios repositorio) {
+
     }
 
     @Override

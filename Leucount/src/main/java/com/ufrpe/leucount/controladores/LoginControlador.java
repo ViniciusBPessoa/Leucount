@@ -29,7 +29,7 @@ public class LoginControlador {
 
             if (MainClass.usuarios.buscarContaBoolean(codigo)){
 
-                LogUser.setLogUser(MainClass.usuarios.buscar(codigo));
+                LogUser.getInstancia(MainClass.usuarios.buscar(codigo));
                 ScreenManager.getInstancia().trocatela("principalTela");
 
             }else {

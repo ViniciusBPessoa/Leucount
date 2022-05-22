@@ -34,6 +34,7 @@ public class RepositorioUsuarios implements InterfaceRepositorioUsuarios {
         return usuario;
     }
 
+    @Override
     public boolean buscarContaBoolean(String codigo){
         boolean usuario = this.usuarios.containsKey(codigo);
         return usuario;

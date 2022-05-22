@@ -191,4 +191,5 @@ public class ScreenManager {
     public void setPerfilControladorCena(PerfilControlador perfilControladorCena) {
         this.perfilControladorCena = perfilControladorCena;
     }
+    
 }
