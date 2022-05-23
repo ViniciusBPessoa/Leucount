@@ -1,10 +1,13 @@
 package com.ufrpe.leucount;
 
 import com.ufrpe.leucount.controladores.*;
+import dados.aleatorio.CodeCriator;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import negocio.Amostra;
+import negocio.Hemograma;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -30,6 +33,12 @@ public class ScreenManager {
 
     private Scene perfilCena;
     private PerfilControlador perfilControladorCena;
+
+    private Scene contadorCena;
+    private ControladorContador contadorcontroladorcena;
+
+    private Scene hemogranaCena;
+    private ControladorCadHemograma hemogramaControladorCena;
 
 
 
@@ -71,6 +80,17 @@ public class ScreenManager {
             this.perfilCena = new Scene(perfilTela);
             this.perfilControladorCena = (PerfilControlador) fxmlLoader.getController();
 
+            fxmlLoader = new FXMLLoader();
+            BorderPane contadorTela = fxmlLoader.load(Objects.requireNonNull(getClass().getResource("ContadorFx.fxml")).openStream());
+            this.contadorCena = new Scene(contadorTela);
+            this.contadorcontroladorcena = (ControladorContador) fxmlLoader.getController();
+
+            fxmlLoader = new FXMLLoader();
+            BorderPane hemogramaTela = fxmlLoader.load(Objects.requireNonNull(getClass().getResource("hemoFx.fxml")).openStream());
+            this.hemogranaCena = new Scene(hemogramaTela);
+            this.hemogramaControladorCena = (ControladorCadHemograma) fxmlLoader.getController();
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -78,7 +98,26 @@ public class ScreenManager {
 
     }
 
+    public void ReloadContador() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        BorderPane contadorTela = fxmlLoader.load(Objects.requireNonNull(getClass().getResource("ContadorFx.fxml")).openStream());
+        this.contadorCena = new Scene(contadorTela);
+        this.contadorcontroladorcena = (ControladorContador) fxmlLoader.getController();
+        this.trocatela("contadorTela");
+    }
+
     public void trocatela(String tela) throws IOException {
+
+        if (tela.equals("hemogramaTela")){
+
+            ScreenManager.getInstancia().primaryStage.setHeight(720);
+            ScreenManager.getInstancia().primaryStage.setWidth(1200);
+
+        }else{
+            ScreenManager.getInstancia().primaryStage.setHeight(656);
+            ScreenManager.getInstancia().primaryStage.setWidth(832);
+        }
+
         switch (tela) {
             case "cadastroTela" -> this.getPrimaryStage().setScene(cadastroCena);
 
@@ -90,7 +129,27 @@ public class ScreenManager {
                 this.getPrimaryStage().setScene(perfilCena);
                 ScreenManager.getInstancia().getPerfilControladorCena().initialize();
             }
+
+            case "contadorTela" -> {
+
+                this.getContadorcontroladorcena().getnAmostra().setText(CodeCriator.aleatorio());
+                this.getContadorcontroladorcena().getnAmostra().setEditable(false);;
+                this.getPrimaryStage().setScene(contadorCena);
+
+            }
+
+            case "hemogramaTela" -> this.getPrimaryStage().setScene(hemogranaCena);
         }
+    }
+    public void trocatela(String tela, Amostra amostra) throws IOException {
+
+        ScreenManager.getInstancia().primaryStage.setHeight(720);
+        ScreenManager.getInstancia().primaryStage.setWidth(1200);
+
+        this.hemogramaControladorCena.inicializate(amostra);
+
+        this.getPrimaryStage().setScene(hemogranaCena);
+
     }
 
     public static void setInstancia(ScreenManager instancia) {
@@ -192,5 +251,36 @@ public class ScreenManager {
     public void setPerfilControladorCena(PerfilControlador perfilControladorCena) {
         this.perfilControladorCena = perfilControladorCena;
     }
-    
+
+    public Scene getContadorCena() {
+        return contadorCena;
+    }
+
+    public void setContadorCena(Scene contadorCena) {
+        this.contadorCena = contadorCena;
+    }
+
+    public ControladorContador getContadorcontroladorcena() {
+        return contadorcontroladorcena;
+    }
+
+    public void setContadorcontroladorcena(ControladorContador contadorcontroladorcena) {
+        this.contadorcontroladorcena = contadorcontroladorcena;
+    }
+
+    public Scene getHemogranaCena() {
+        return hemogranaCena;
+    }
+
+    public void setHemogranaCena(Scene hemogranaCena) {
+        this.hemogranaCena = hemogranaCena;
+    }
+
+    public ControladorCadHemograma getHemogramaControladorCena() {
+        return hemogramaControladorCena;
+    }
+
+    public void setHemogramaControladorCena(ControladorCadHemograma hemogramaControladorCena) {
+        this.hemogramaControladorCena = hemogramaControladorCena;
+    }
 }

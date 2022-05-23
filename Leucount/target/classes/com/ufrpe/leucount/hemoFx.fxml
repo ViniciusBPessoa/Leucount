@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.geometry.*?>
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -14,9 +12,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dados.ControladorCadHemograma">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ufrpe.leucount.controladores.ControladorCadHemograma">
    <center>
       <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
@@ -24,21 +24,21 @@
                <content>
                   <AnchorPane prefHeight="720.0" prefWidth="1200.0">
                      <children>
-                        <Label layoutX="432.0" layoutY="14.0" text="Hemograma" textFill="#2a10d7">
+                        <Label layoutX="537.0" layoutY="14.0" text="Hemograma" textFill="#2a10d7">
                            <font>
                               <Font name="Arial Bold" size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="18.0" layoutY="446.0" text="Plaquetas" />
-                        <TextField fx:id="plaqEd" alignment="CENTER_RIGHT" layoutX="99.0" layoutY="442.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="60.0" promptText="0">
+                        <Label layoutX="18.0" layoutY="510.0" text="Plaquetas*" />
+                        <TextField fx:id="plaqEd" alignment="CENTER_RIGHT" layoutX="99.0" layoutY="506.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="60.0" promptText="0">
                            <font>
                               <Font size="11.0" />
                            </font>
                         </TextField>
-                        <Label layoutX="162.0" layoutY="446.0" text="/mm3" />
-                        <TextArea fx:id="hemObserv" layoutX="19.0" layoutY="311.0" prefHeight="120.0" prefWidth="462.0" />
+                        <Label layoutX="162.0" layoutY="510.0" text="/mm3" />
+                        <TextArea fx:id="hemObserv" layoutX="20.0" layoutY="414.0" prefHeight="84.0" prefWidth="462.0" />
                         <TextArea fx:id="leucoObserv" layoutX="505.0" layoutY="510.0" prefHeight="136.0" prefWidth="540.0" />
-                        <TextArea fx:id="plaqObserv" layoutX="18.0" layoutY="492.0" prefHeight="152.0" prefWidth="464.0" />
+                        <TextArea fx:id="plaqObserv" layoutX="18.0" layoutY="552.0" prefHeight="92.0" prefWidth="464.0" />
                         <Label layoutX="843.0" layoutY="37.0" text="Referencial Leucocitário Adulto" />
                         <Label layoutX="925.0" layoutY="105.0" />
                         <Button layoutX="1059.0" layoutY="510.0" mnemonicParsing="false" onAction="#onContadorButton" prefHeight="66.0" prefWidth="110.0" text="Contador" AnchorPane.leftAnchor="1059.0">
@@ -46,12 +46,12 @@
                               <Font name="Arial Bold" size="18.0" />
                            </font>
                         </Button>
-                        <Label layoutX="21.0" layoutY="291.0" text="Observações:">
+                        <Label layoutX="24.0" layoutY="390.0" text="Observações:">
                            <font>
                               <Font name="Arial" size="11.0" />
                            </font>
                         </Label>
-                        <Label layoutX="18.0" layoutY="471.0" text="Observações:">
+                        <Label layoutX="18.0" layoutY="535.0" text="Observações:">
                            <font>
                               <Font name="Arial" size="11.0" />
                            </font>
@@ -61,7 +61,7 @@
                               <Font name="Arial" size="11.0" />
                            </font>
                         </Label>
-                        <Label layoutX="202.0" layoutY="446.0" text="150000 a 450000 / mm3" />
+                        <Label layoutX="202.0" layoutY="510.0" text="150000 a 450000 / mm3" />
                         <Button layoutX="1060.0" layoutY="579.0" mnemonicParsing="false" onAction="#onSalvarButton" prefHeight="66.0" prefWidth="110.0" text="Salvar" AnchorPane.leftAnchor="1059.0">
                            <font>
                               <Font name="Arial Bold" size="18.0" />
@@ -289,7 +289,7 @@
                               <Cursor fx:constant="DISAPPEAR" />
                            </cursor>
                         </VBox>
-                        <VBox alignment="TOP_CENTER" layoutX="354.0" layoutY="55.0" prefHeight="116.0" prefWidth="85.0" spacing="10.0">
+                        <VBox alignment="TOP_CENTER" layoutX="357.0" layoutY="154.0" prefHeight="116.0" prefWidth="85.0" spacing="10.0">
                            <children>
                               <Label text="Mulheres" />
                               <Label text="4.3 ± 0.5 " />
@@ -297,7 +297,7 @@
                               <Label text="41 ± 5 " />
                            </children>
                         </VBox>
-                        <VBox alignment="TOP_CENTER" layoutX="272.0" layoutY="55.0" prefHeight="102.0" prefWidth="77.0" spacing="10.0">
+                        <VBox alignment="TOP_CENTER" layoutX="275.0" layoutY="154.0" prefHeight="102.0" prefWidth="77.0" spacing="10.0">
                            <children>
                               <Label text="Homens" />
                               <Label text="5.00 ± 0.5" />
@@ -305,7 +305,7 @@
                               <Label text="45 ± 5 " />
                            </children>
                         </VBox>
-                        <VBox layoutX="169.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="84.0" spacing="13.0">
+                        <VBox layoutX="172.0" layoutY="173.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="84.0" spacing="13.0">
                            <children>
                               <Label text="milhões/mm3" />
                               <Label text="g/dL" />
@@ -319,21 +319,21 @@
                               <Insets top="4.0" />
                            </padding>
                         </VBox>
-                        <VBox alignment="TOP_RIGHT" layoutX="15.0" layoutY="71.0" prefHeight="200.0" prefWidth="80.0" spacing="12.4">
+                        <VBox alignment="TOP_RIGHT" layoutX="18.0" layoutY="170.0" prefHeight="200.0" prefWidth="80.0" spacing="12.4">
                            <children>
-                              <Label text="Hemácia" />
-                              <Label text="Hemoglobina" />
-                              <Label text="Hematócritio" />
+                              <Label text="Hemácia*" />
+                              <Label text="Hemoglobina*" />
+                              <Label text="Hematócritio*" />
                               <Label text="VCM" />
                               <Label text="HCM" />
                               <Label text="CHCM" />
-                              <Label text="RDW" />
+                              <Label text="RDW*" />
                            </children>
                            <padding>
                               <Insets top="7.0" />
                            </padding>
                         </VBox>
-                        <VBox layoutX="105.0" layoutY="77.0" prefHeight="200.0" prefWidth="56.0" spacing="5.4">
+                        <VBox layoutX="108.0" layoutY="176.0" prefHeight="200.0" prefWidth="56.0" spacing="5.4">
                            <children>
                               <TextField fx:id="hemacia" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="56.0" promptText="0">
                                  <font>
@@ -372,7 +372,7 @@
                               </TextField>
                            </children>
                         </VBox>
-                        <VBox alignment="TOP_CENTER" layoutX="317.0" layoutY="162.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="123.0" prefWidth="74.0" spacing="13.0">
+                        <VBox alignment="TOP_CENTER" layoutX="320.0" layoutY="261.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="123.0" prefWidth="74.0" spacing="13.0">
                            <children>
                               <Label text="12.8 ± 1.2" />
                               <Label text="33 ± 1.5" />
@@ -385,7 +385,7 @@
                         </VBox>
                         <VBox alignment="TOP_RIGHT" layoutX="492.0" layoutY="65.0" prefHeight="421.0" prefWidth="89.0" spacing="13.0">
                            <children>
-                              <Label text="Leucócitos">
+                              <Label text="Leucócitos*">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
@@ -408,6 +408,30 @@
                               <Insets top="11.0" />
                            </padding>
                         </VBox>
+                        <HBox layoutX="35.0" layoutY="70.0" prefHeight="29.0" prefWidth="418.0">
+                           <children>
+                              <Label alignment="BOTTOM_LEFT" prefHeight="21.0" prefWidth="52.0" text="Amostra" />
+                              <TextField fx:id="codigo" alignment="TOP_LEFT" prefHeight="24.0" prefWidth="127.0" promptText="Número">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="79.0" text="Nascimento*" textAlignment="CENTER" />
+                              <DatePicker fx:id="datanascimento" prefHeight="25.0" prefWidth="175.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="32.0" layoutY="109.0" prefHeight="31.0" prefWidth="420.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="23.0" prefWidth="52.0" text="Paciente" />
+                              <TextField fx:id="nome" alignment="TOP_LEFT" prefHeight="24.0" prefWidth="262.0" promptText="Nome do paciente">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="39.0" text="Sexo*" />
+                              <ComboBox fx:id="sexo" prefHeight="25.0" prefWidth="67.0" />
+                           </children>
+                        </HBox>
                      </children>
                   </AnchorPane>
                </content>

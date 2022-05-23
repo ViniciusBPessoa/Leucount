@@ -15,7 +15,7 @@ public class Usuario implements Serializable {
     private String senha;
     private LocalDate dataNascimento;
     private String titulo;
-    private ArrayList<String> feed;
+    private ArrayList<String> feed = new ArrayList<>(10);
     private ArrayList<Grupos> grupos;
 
 

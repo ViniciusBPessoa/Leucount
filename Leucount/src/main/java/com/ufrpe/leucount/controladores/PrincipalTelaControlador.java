@@ -21,7 +21,10 @@ public class PrincipalTelaControlador {
     }
 
     @FXML
-    public void novopost(){
+    public void novaAmostra() throws IOException {
+
+        ScreenManager.getInstancia().trocatela("contadorTela");
+
     }
 
 }

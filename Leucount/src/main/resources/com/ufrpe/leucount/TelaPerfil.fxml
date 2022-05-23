@@ -15,39 +15,59 @@
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Text layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perfil">
+            <Text layoutX="13.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perfil" wrappingWidth="111.107421875">
                <font>
-                  <Font name="System Bold" size="22.0" />
+                  <Font name="Segoe UI Black" size="35.0" />
                </font>
             </Text>
-            <Text layoutX="8.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minhas informações" />
-            <Button layoutX="69.0" layoutY="361.0" mnemonicParsing="false" text="Alterar informações" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="69.0" />
+            <Text layoutX="8.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minhas informações" />
             <Button layoutX="9.0" layoutY="361.0" mnemonicParsing="false" onAction="#voltar" text="Voltar" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="9.0" />
             <VBox layoutX="15.0" layoutY="107.0" prefHeight="246.0" prefWidth="171.0">
                <children>
-                  <Label fx:id="idade" text="Idade: ">
+                  <Label text="Titulo: ">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                      <VBox.margin>
-                        <Insets bottom="10.0" top="50.0" />
+                        <Insets top="30.0" />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="titulo" text="Titulo: ">
+                  <Label fx:id="titulo" alignment="CENTER" style="-fx-background-color: #e8dcdd; -fx-background-radius: 8;" text="Titulo: ">
                      <font>
-                        <Font name="System Bold" size="20.0" />
+                        <Font size="20.0" />
                      </font>
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="codigo" text="Codigo: ">
+                  <Label text="Idade: ">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                      <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="idade" alignment="CENTER" style="-fx-background-color: #e8dcdd; -fx-background-radius: 8;" text="Idade: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
+                  </Label>
+                  <Label text="Codigo: ">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="codigo" alignment="CENTER" style="-fx-background-color: #e8dcdd; -fx-background-radius: 8;" text="Codigo: ">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
                   </Label>
                </children></VBox>
             <Label layoutX="16.0" layoutY="44.0" text="Nome">
@@ -55,7 +75,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="name" layoutX="16.0" layoutY="71.0" text="Nome">
+            <Label fx:id="name" alignment="CENTER" layoutX="16.0" layoutY="71.0" prefHeight="19.0" prefWidth="65.0" style="-fx-background-color: #e8dcdd; -fx-background-radius: 8;" text="Nome">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -66,17 +86,11 @@
    <center>
       <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
-          <Tab text="Histórico de Atividades" />
           <Tab text="Minhas amostras">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="393.0" prefWidth="406.0" />
             </content>
           </Tab>
-            <Tab text="Publicações">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-              </content>
-            </Tab>
         </tabs>
       </TabPane>
    </center>

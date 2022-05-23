@@ -2,6 +2,7 @@ package dados.interfaces;
 
 import negocio.Amostra;
 
+import java.io.Serializable;
 import java.util.Map;
 
 public interface InterfaceRepositorioAmostra {

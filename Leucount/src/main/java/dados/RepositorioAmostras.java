@@ -3,18 +3,14 @@ package dados;
 import dados.interfaces.InterfaceRepositorioAmostra;
 import negocio.Amostra;
 
+import java.io.Serializable;
 import java.util.Map;
 
-public class RepositorioAmostras implements InterfaceRepositorioAmostra {
+public class RepositorioAmostras implements InterfaceRepositorioAmostra , Serializable {
 
     private Map<String, Amostra> amostras;
 
-    public RepositorioAmostras(Map<String, Amostra> amostras) {
-        this.amostras = amostras;
-    }
 
-    public RepositorioAmostras() {
-    }
 
     @Override
     public void inserir(Amostra amostra){  /* exeções ainda não tratadas */

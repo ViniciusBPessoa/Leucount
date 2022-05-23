@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -17,6 +18,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
+            <ListView layoutY="38.0" prefHeight="363.0" prefWidth="450.0" />
          </children>
       </AnchorPane>
    </center>
@@ -30,11 +32,8 @@
             </Text>
             <VBox layoutX="11.0" layoutY="57.0" prefHeight="3.0" prefWidth="129.0">
                <children>
-                  <Hyperlink alignment="TOP_CENTER" prefHeight="23.0" prefWidth="130.0" text="Nova Amostra" />
-                  <Hyperlink alignment="TOP_CENTER" onAction="#novopost" prefHeight="23.0" prefWidth="130.0" text="Novo Post" />
+                  <Hyperlink alignment="TOP_CENTER" onAction="#novaAmostra" prefHeight="23.0" prefWidth="130.0" text="Nova Amostra" />
                   <Hyperlink alignment="TOP_CENTER" onAction="#perfil" prefHeight="23.0" prefWidth="130.0" text="Meu Perfil" />
-                  <Hyperlink alignment="TOP_CENTER" prefHeight="23.0" prefWidth="130.0" text="Grupos" />
-                  <Hyperlink alignment="TOP_CENTER" prefHeight="23.0" prefWidth="130.0" text="Conversas" />
                   <Hyperlink alignment="TOP_CENTER" onAction="#sair" prefHeight="23.0" prefWidth="130.0" text="Sair" />
                </children>
             </VBox>

@@ -1,39 +1,28 @@
 package dados;
 
 import dados.interfaces.InterfaceControladorAmostras;
-import negocio.social.Usuario;
 
 import java.io.*;
-import java.util.ArrayList;
 
-public class ControladorAmostras implements InterfaceControladorAmostras {
+public class ControladorAmostras implements InterfaceControladorAmostras, Serializable {
 
-    private ArrayList<RepositorioAmostras> amostras; /* Revisar meios de salvamento emarquivo com prof */
+    private RepositorioAmostras amostras; /* Revisar meios de salvamento emarquivo com prof */
 
     private static ControladorAmostras instanciaamostra;
 
-    public ControladorAmostras(ArrayList<RepositorioAmostras> amostras) {
-        this.amostras = amostras;
+    public static ControladorAmostras getInstanciaamostra(){
+        if (instanciaamostra != null){
+            instanciaamostra = lerDoArquivo();
+        }
+        return instanciaamostra;
     }
 
-    public ControladorAmostras(){} /* carregar os arquivos .dat */
 
-    @Override
-    public void inserir(RepositorioAmostras repositorio){
-        this.amostras.clear();
-        this.amostras.add(repositorio);
-    }
+    private static ControladorAmostras lerDoArquivo(){
+        ControladorAmostras instancialocal;
 
-    @Override
-    public void deletar(Usuario usuario){  /* sem considerar nenhuma exeção */
-        this.amostras.clear();
-    }
-
-    private static void lerDoArquivo(){
-        ControladorAmostras instancialocal = null;
-
-        File in = new File("controladoramostrar.dat");
-        FileInputStream fis = null;
+        File in = new File("controladoramostras.dat");
+        FileInputStream fis;
         ObjectInputStream ois = null;
 
         try{
@@ -50,17 +39,15 @@ public class ControladorAmostras implements InterfaceControladorAmostras {
                 }catch (IOException ignored){}
             }
         }
-
-
+        return instancialocal;
     }
-
     @Override
     public void salvar(){
         if (instanciaamostra == null) {
             return;
         }
         File out = new File("controladoramostras.dat");
-        FileOutputStream fos = null;
+        FileOutputStream fos;
         ObjectOutputStream oos = null;
 
         try {
@@ -78,15 +65,17 @@ public class ControladorAmostras implements InterfaceControladorAmostras {
                 }
             }
         }
+    }
 
-    } /* Responsavel por armazenar em um arquivo */
-
-    public ArrayList<RepositorioAmostras> getAmostras() {
+    public RepositorioAmostras getAmostras() {
         return amostras;
     }
 
-    public void setAmostras(ArrayList<RepositorioAmostras> amostras) {
+    public void setAmostras(RepositorioAmostras amostras) {
         this.amostras = amostras;
     }
 
+    public static void setInstanciaamostra(ControladorAmostras instanciaamostra) {
+        ControladorAmostras.instanciaamostra = instanciaamostra;
+    }
 }

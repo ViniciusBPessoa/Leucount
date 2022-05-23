@@ -9,23 +9,6 @@
 <?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ufrpe.leucount.controladores.ChatControlador">
-   <right>
-      <ScrollPane prefHeight="379.0" prefWidth="414.0" BorderPane.alignment="CENTER">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="395.0" prefWidth="398.0">
-               <children>
-                  <Text layoutX="14.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mensagens">
-                     <font>
-                        <Font name="System Bold" size="32.0" />
-                     </font>
-                  </Text>
-                  <TextField layoutX="6.0" layoutY="362.0" prefHeight="25.0" prefWidth="335.0" promptText="Digite sua mensagem..." />
-                  <Button layoutX="350.0" layoutY="362.0" mnemonicParsing="false" text="Enviar" />
-               </children>
-            </AnchorPane>
-        </content>
-      </ScrollPane>
-   </right>
    <left>
       <ScrollPane prefHeight="400.0" prefWidth="196.0" BorderPane.alignment="CENTER">
         <content>
@@ -41,4 +24,18 @@
         </content>
       </ScrollPane>
    </left>
+   <center>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="395.0" prefWidth="398.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField layoutX="6.0" layoutY="362.0" prefHeight="25.0" prefWidth="335.0" promptText="Digite sua mensagem..." />
+            <Button layoutX="350.0" layoutY="362.0" mnemonicParsing="false" text="Enviar" />
+            <ScrollPane prefHeight="360.0" prefWidth="402.0" />
+            <Text layoutX="14.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mensagens">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
 </BorderPane>

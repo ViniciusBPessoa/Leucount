@@ -1,8 +1,11 @@
 package com.ufrpe.leucount.controladores;
 
+import com.ufrpe.leucount.ScreenManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import negocio.social.LogUser;
+
+import java.io.IOException;
 
 
 public class PerfilControlador {
@@ -20,22 +23,24 @@ public class PerfilControlador {
     private Label codigo;
 
     @FXML
-    public void voltar(){
+    public void voltar() throws IOException {
+
+        ScreenManager.getInstancia().trocatela("principalTela");
+
     }
 
     public void initialize() {
 
         if (LogUser.getLogInstancia() != null) {
-            String age = idade.getText();
-            idade.setText(age + " \n" + LogUser.getLogInstancia().getLogUser().idade());
+
+            String test = String.valueOf((LogUser.getLogInstancia().getLogUser().idade()));
+            idade.setText(test);
 
             name.setText(LogUser.getLogInstancia().getLogUser().getNome());
 
-            String cargo = titulo.getText();
-            titulo.setText(cargo + " \n" + LogUser.getLogInstancia().getLogUser().getTitulo());
+            titulo.setText(LogUser.getLogInstancia().getLogUser().getTitulo());
 
-            String num = codigo.getText();
-            codigo.setText(num + " \n" + LogUser.getLogInstancia().getLogUser().getCodigo());
+            codigo.setText(LogUser.getLogInstancia().getLogUser().getCodigo());
         }
 
     }
