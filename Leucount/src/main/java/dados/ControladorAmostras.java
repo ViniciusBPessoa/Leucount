@@ -11,7 +11,7 @@ public class ControladorAmostras implements InterfaceControladorAmostras, Serial
     private static ControladorAmostras instanciaamostra;
 
     public static ControladorAmostras getInstanciaamostra(){
-        if (instanciaamostra != null){
+        if (instanciaamostra == null){
             instanciaamostra = lerDoArquivo();
         }
         return instanciaamostra;

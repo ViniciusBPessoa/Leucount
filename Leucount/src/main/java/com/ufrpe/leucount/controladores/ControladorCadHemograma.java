@@ -293,5 +293,403 @@ public class ControladorCadHemograma implements InterfaceControladorCadHemograma
 
     }
 
+    public Leucocito getLeucos() {
+        return leucos;
+    }
 
+    public void setLeucos(Leucocito leucos) {
+        this.leucos = leucos;
+    }
+
+    public Hematopoiese getHematos() {
+        return hematos;
+    }
+
+    public void setHematos(Hematopoiese hematos) {
+        this.hematos = hematos;
+    }
+
+    public ControladorCadHemograma getCadHemogramaHemo() {
+        return cadHemogramaHemo;
+    }
+
+    public void setCadHemogramaHemo(ControladorCadHemograma cadHemogramaHemo) {
+        this.cadHemogramaHemo = cadHemogramaHemo;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public int getEritro() {
+        return eritro;
+    }
+
+    public void setEritro(int eritro) {
+        this.eritro = eritro;
+    }
+
+    public boolean isCaluculados() {
+        return caluculados;
+    }
+
+    public void setCaluculados(boolean caluculados) {
+        this.caluculados = caluculados;
+    }
+
+    public int getTotalcel() {
+        return totalcel;
+    }
+
+    public void setTotalcel(int totalcel) {
+        this.totalcel = totalcel;
+    }
+
+    public Amostra getInternalAmostra() {
+        return internalAmostra;
+    }
+
+    public void setInternalAmostra(Amostra internalAmostra) {
+        this.internalAmostra = internalAmostra;
+    }
+
+    public TextField getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(TextField codigo) {
+        this.codigo = codigo;
+    }
+
+    public TextField getNome() {
+        return nome;
+    }
+
+    public void setNome(TextField nome) {
+        this.nome = nome;
+    }
+
+    public DatePicker getDatanascimento() {
+        return datanascimento;
+    }
+
+    public void setDatanascimento(DatePicker datanascimento) {
+        this.datanascimento = datanascimento;
+    }
+
+    public TextField getHemacia() {
+        return hemacia;
+    }
+
+    public void setHemacia(TextField hemacia) {
+        this.hemacia = hemacia;
+    }
+
+    public TextField getHematocrito() {
+        return hematocrito;
+    }
+
+    public void setHematocrito(TextField hematocrito) {
+        this.hematocrito = hematocrito;
+    }
+
+    public TextField getHemoglobina() {
+        return hemoglobina;
+    }
+
+    public void setHemoglobina(TextField hemoglobina) {
+        this.hemoglobina = hemoglobina;
+    }
+
+    public TextField getRdwEd() {
+        return rdwEd;
+    }
+
+    public void setRdwEd(TextField rdwEd) {
+        this.rdwEd = rdwEd;
+    }
+
+    public TextField getHcmEd() {
+        return hcmEd;
+    }
+
+    public void setHcmEd(TextField hcmEd) {
+        this.hcmEd = hcmEd;
+    }
+
+    public TextField getChcmEd() {
+        return chcmEd;
+    }
+
+    public void setChcmEd(TextField chcmEd) {
+        this.chcmEd = chcmEd;
+    }
+
+    public TextField getVcmEd() {
+        return vcmEd;
+    }
+
+    public void setVcmEd(TextField vcmEd) {
+        this.vcmEd = vcmEd;
+    }
+
+    public TextField getLeucoTot() {
+        return LeucoTot;
+    }
+
+    public void setLeucoTot(TextField leucoTot) {
+        LeucoTot = leucoTot;
+    }
+
+    public TextField getLinfoAAbs() {
+        return linfoAAbs;
+    }
+
+    public void setLinfoAAbs(TextField linfoAAbs) {
+        this.linfoAAbs = linfoAAbs;
+    }
+
+    public TextField getLinfoARel() {
+        return linfoARel;
+    }
+
+    public void setLinfoARel(TextField linfoARel) {
+        this.linfoARel = linfoARel;
+    }
+
+    public TextField getLinfoTRel() {
+        return linfoTRel;
+    }
+
+    public void setLinfoTRel(TextField linfoTRel) {
+        this.linfoTRel = linfoTRel;
+    }
+
+    public TextField getLinfoAbs() {
+        return linfoAbs;
+    }
+
+    public void setLinfoAbs(TextField linfoAbs) {
+        this.linfoAbs = linfoAbs;
+    }
+
+    public TextField getMetaAbs() {
+        return metaAbs;
+    }
+
+    public void setMetaAbs(TextField metaAbs) {
+        this.metaAbs = metaAbs;
+    }
+
+    public TextField getMetaRel() {
+        return metaRel;
+    }
+
+    public void setMetaRel(TextField metaRel) {
+        this.metaRel = metaRel;
+    }
+
+    public TextField getMielAbs() {
+        return mielAbs;
+    }
+
+    public void setMielAbs(TextField mielAbs) {
+        this.mielAbs = mielAbs;
+    }
+
+    public TextField getMielRel() {
+        return mielRel;
+    }
+
+    public void setMielRel(TextField mielRel) {
+        this.mielRel = mielRel;
+    }
+
+    public TextField getMonoRel() {
+        return monoRel;
+    }
+
+    public void setMonoRel(TextField monoRel) {
+        this.monoRel = monoRel;
+    }
+
+    public TextField getMonoAbs() {
+        return monoAbs;
+    }
+
+    public void setMonoAbs(TextField monoAbs) {
+        this.monoAbs = monoAbs;
+    }
+
+    public TextField getSegRel() {
+        return segRel;
+    }
+
+    public void setSegRel(TextField segRel) {
+        this.segRel = segRel;
+    }
+
+    public TextField getSegAbs() {
+        return segAbs;
+    }
+
+    public void setSegAbs(TextField segAbs) {
+        this.segAbs = segAbs;
+    }
+
+    public TextField getBasoAbs() {
+        return basoAbs;
+    }
+
+    public void setBasoAbs(TextField basoAbs) {
+        this.basoAbs = basoAbs;
+    }
+
+    public TextField getBasoRel() {
+        return basoRel;
+    }
+
+    public void setBasoRel(TextField basoRel) {
+        this.basoRel = basoRel;
+    }
+
+    public TextField getEosiAbs() {
+        return eosiAbs;
+    }
+
+    public void setEosiAbs(TextField eosiAbs) {
+        this.eosiAbs = eosiAbs;
+    }
+
+    public TextField getEosiRel() {
+        return eosiRel;
+    }
+
+    public void setEosiRel(TextField eosiRel) {
+        this.eosiRel = eosiRel;
+    }
+
+    public TextField getBlastRel() {
+        return blastRel;
+    }
+
+    public void setBlastRel(TextField blastRel) {
+        this.blastRel = blastRel;
+    }
+
+    public TextField getBlastAbs() {
+        return blastAbs;
+    }
+
+    public void setBlastAbs(TextField blastAbs) {
+        this.blastAbs = blastAbs;
+    }
+
+    public TextField getBastAbs() {
+        return bastAbs;
+    }
+
+    public void setBastAbs(TextField bastAbs) {
+        this.bastAbs = bastAbs;
+    }
+
+    public TextField getBastRel() {
+        return bastRel;
+    }
+
+    public void setBastRel(TextField bastRel) {
+        this.bastRel = bastRel;
+    }
+
+    public TextField getPromielRel() {
+        return promielRel;
+    }
+
+    public void setPromielRel(TextField promielRel) {
+        this.promielRel = promielRel;
+    }
+
+    public TextField getPromielAbs() {
+        return promielAbs;
+    }
+
+    public void setPromielAbs(TextField promielAbs) {
+        this.promielAbs = promielAbs;
+    }
+
+    public TextField getPlasmoRel() {
+        return plasmoRel;
+    }
+
+    public void setPlasmoRel(TextField plasmoRel) {
+        this.plasmoRel = plasmoRel;
+    }
+
+    public TextField getPlasmoAbs() {
+        return plasmoAbs;
+    }
+
+    public void setPlasmoAbs(TextField plasmoAbs) {
+        this.plasmoAbs = plasmoAbs;
+    }
+
+    public TextField getPlaqEd() {
+        return plaqEd;
+    }
+
+    public void setPlaqEd(TextField plaqEd) {
+        this.plaqEd = plaqEd;
+    }
+
+    public TextField getNeuAbs() {
+        return neuAbs;
+    }
+
+    public void setNeuAbs(TextField neuAbs) {
+        this.neuAbs = neuAbs;
+    }
+
+    public TextField getNeuRel() {
+        return neuRel;
+    }
+
+    public void setNeuRel(TextField neuRel) {
+        this.neuRel = neuRel;
+    }
+
+    public TextArea getHemObserv() {
+        return hemObserv;
+    }
+
+    public void setHemObserv(TextArea hemObserv) {
+        this.hemObserv = hemObserv;
+    }
+
+    public TextArea getLeucoObserv() {
+        return leucoObserv;
+    }
+
+    public void setLeucoObserv(TextArea leucoObserv) {
+        this.leucoObserv = leucoObserv;
+    }
+
+    public TextArea getPlaqObserv() {
+        return plaqObserv;
+    }
+
+    public void setPlaqObserv(TextArea plaqObserv) {
+        this.plaqObserv = plaqObserv;
+    }
+
+    public ComboBox<String> getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(ComboBox<String> sexo) {
+        this.sexo = sexo;
+    }
 }
